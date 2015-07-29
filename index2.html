@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+		<div class="container">
+			<div class="row">
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<canvas class = "col offset-l3" id="myCanvas" width="300" height="300"></canvas>
+				<script>
+					var canvas = document.getElementById('myCanvas');
+					var ctx = canvas.getContext('2d');
+					
+					ctx.beginPath();
+					ctx.strokeStyle="black";
+					ctx.lineWidth="1";
+					ctx.font = "20px Arial";
+					
+					//unterste Ebene
+					ctx.rect (0, 250, 50, 50);
+					ctx.rect (50, 250, 50, 50);
+					ctx.rect (100, 250, 50, 50);
+					ctx.rect (150, 250, 50, 50);
+					ctx.rect (200, 250, 50, 50);
+					
+					//2. Ebene
+					ctx.rect (25, 200, 50, 50);
+					ctx.rect (75, 200, 50, 50);
+					ctx.rect (125, 200, 50, 50);
+					ctx.rect (175, 200, 50, 50);
+					
+					//3. Ebene
+					ctx.rect (50, 150, 50, 50);
+					ctx.rect (100, 150, 50, 50);
+					ctx.rect (150, 150, 50, 50);
+					
+					//4. Ebene
+					ctx.rect (75, 100, 50, 50);
+					ctx.rect (125, 100, 50, 50);
+					
+					//oberste Ebene
+					ctx.rect (100, 50, 50, 50);
+					
+					//unterste Ebene
+					ctx.fillText ("1",20,283);
+					ctx.fillText ("4",70,283);
+					ctx.fillText ("9",120,283);
+					ctx.fillText ("16",163,283);
+					ctx.fillText ("25",213,283);
+					
+					//2. Ebene
+					ctx.fillText ("5",45,233);
+					ctx.fillText ("13",88,233);
+					ctx.fillText ("25",138,233);
+					ctx.fillText ("41",188,233);
+					
+					//3. Ebene
+					ctx.fillText ("18",62,183);
+					ctx.fillText ("38",112,183);
+					ctx.fillText ("66",162,183);
+					
+					//4. Ebene
+					ctx.fillText ("56",87,133);
+					ctx.fillText ("114",130,133);
+					
+					//oberste Ebene
+					ctx.fillText ("160",105,83);
+					
+										
+					ctx.stroke();
+				</script>
+			</div>
+		</div>
+	</body>
+</html>
